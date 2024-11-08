@@ -1,0 +1,95 @@
+<!-- myapp/templates/myapp/index.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Credit Score</title>
+    <style>
+        body{
+          background-color:  rgb(191, 162, 227);
+        }
+        .container {
+          max-width: 400px;
+          margin-left: 35%;
+          margin-top: 9.5%;
+          padding: 20px;
+          text-align: center;
+          background-color: #fff;
+        }
+        
+        h1 {
+          font-size: 50px;
+          margin-bottom: 20px;
+          margin-top: 300px;
+          margin-left: 600px;
+
+        }
+        
+        .form-group {
+          display: flex;
+          flex-direction: column;
+          margin-bottom: 10px;
+          text-align: left;
+        }
+        
+        label {
+          font-weight: bold;
+          font-size: 35px;
+          margin-bottom: 5px;
+          margin-left:550px ;
+        }
+        
+        input[type="text"],
+        input[type="number"],
+        input[type="time"] {
+          padding: 10px;
+          border-radius: 5px;
+          border: none;
+          box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+        
+        button {
+          background-color: #007bff;
+          color: #ffffff;
+          margin-top: 18px;
+          padding: 10px 20px;
+          margin-left: 700px;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+          transition: background-color 0.3s ease;
+        }
+        
+        button:hover {
+          background-color: #0069d9;
+        }
+        
+        .result {
+          margin-top: 20px;
+          padding: 20px;
+          border-radius: 5px;
+          box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+        a{
+          color: #ffffff;
+        }
+      </style>
+</head>
+
+<body>
+    <h1>Credit Score</h1>
+   
+    <form method="post" action="{% url 'index' %}">
+        {% csrf_token %}
+        <label for="action">Choose an action:</label>
+        <select name="action" id="action">
+            <option value="0">Bad Credit Behavior</option>
+            <option value="1">Good Credit Behavior</option>
+        </select>
+    </form>
+</div>
+<button type="submit" id="submit-btn"><a href=result2.html>Submit</a></button>
+</div> 
+   
+    
+</body>
+</html>

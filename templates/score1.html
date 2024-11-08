@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+    body{
+        background-color: rgb(188, 162, 213);
+      }
+      .container {
+        width: 800px;
+        height: 1300px;
+        margin-left: 22%;
+        margin-top: 1.5%;
+        padding-left: 42px ;
+        padding-top: 20px;
+        text-align: center;
+        background-color: #98ba92;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+      }
+      
+      
+      .form-group {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 10px;
+        text-align: left;
+      }
+      
+      label {
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
+      
+      input[type="text"],
+      input[type="number"] {
+        padding: 10px;
+        border-radius: 5px;
+        border: none;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+      }
+      
+      button {
+        background-color: #007bff;
+        color: #ffffff;
+        margin-top: 18px;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+      
+      button:hover {
+        background-color: #0069d9;
+      }
+      
+      .result {
+        margin-top: 20px;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+      }
+/* Create four equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 42%;
+  padding: 20px;
+  height: 1120px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+  width: 400px;
+}
+button{
+ text-align: left;
+ margin-top: 3.2%;
+}
+h1{
+    margin-top: 0.8px;
+}
+</style>
+</head>
+<body>
+
+
+<div class="container">
+    <h1>Credit Card Score Classification</h1>
+<div class="row">
+  <div class="column" style="background-color:#ffffff;">
+    <form action="result1">
+    <form id="credit-card-form">
+      <div class="form-group">
+        <label for="id">Id:</label>
+        <input type="text" id="id" name="id" required>
+      </div>
+      <div class="form-group">
+        <label for="customerid">Customer Id:</label>
+        <input type="text" id="customerid" name="customerid" required>
+      </div>
+      <div class="form-group">
+        <label for="month">Month:</label>
+        <input type="text" id="month" name="month" required>
+      </div>
+      <div class="form-group">
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" step="any" required>
+      </div>
+      <div class="form-group">
+        <label for="ssn">SSN:</label>
+        <input type="text" id="ssn" name="ssn" required>
+      </div>
+      <div class="form-group">
+        <label for="occupation">Occupation:</label>
+        <input type="text" id="occupation" name="occupation" required>
+      </div>
+  
+          <div class="form-group">
+            <label for="annualincome">Annual Income:</label>
+            <input type="number" id="annualincome" name="annualincome" step="any" required>
+          </div>
+  
+          <div class="form-group">
+            <label for="monthlyInhandSalary">Monthly Inhand Salary:</label>
+            <input type="number" id="monthlyInhandSalary" name="monthlyInhandSalary" step="any" required>
+          </div>
+  
+          <div class="form-group">
+            <label for="noofbankaccounts">No. of bank accounts:</label>
+            <input type="number" id="noofbankaccounts" name="noofbankaccounts" step="any" required>
+          </div>
+          <div class="form-group">
+            <label for="noofcreditcards">No. of Credit Cards:</label>
+            <input type="number" id="noofcreditcards" name="noofcreditcards" step="any" required>
+          </div>
+          <div class="form-group">
+              <label for="interestRate">Interest Rate:</label>
+              <input type="number" id="interestRate" name="interestRate" step="any" required>
+            </div>
+            <div class="form-group">
+              <label for="delayfromduedate">Delay from due date:</label>
+              <input type="number" id="delayfromduedate" name="delayfromduedate" required>
+            </div>
+            <div class="form-group">
+              <label for="noofdelayedpayments">No.of delayed payments:</label>
+              <input type="number" id="noofdelayedpayments" name="noofdelayedpayments" step="any" required>
+            </div>
+            <div class="form-group">
+              <label for="changedcreditlimit">Changed Credit Limit:</label>
+              <input type="number" id="changedcreditlimit" name="changedcreditlimit" step="any" required>
+            </div>
+            <div class="form-group">
+              <label for="noofcreditinquiries">No of Credit Inquiries:</label>
+              <input type="number" id="noofcreditinquiries" name="noofcreditinquiries" step="any" required>
+            </div>
+            <div class="form-group">
+              <label for="creditmix">Credit Mix:</label>
+              <input type="text" id="creditmix" name="creditmix" required>
+            </div>
+           
+            
+            
+  </div>
+  <div class="column" style="background-color:#ffffff;">
+    <div class="form-group">
+        <label for="outstandingdebt">Outstanding Debt:</label>
+        <input type="number" id="outstandingdebt" name="outstandingdebt" step="any" required>
+      </div>
+      
+    <div class="form-group">
+      <label for="creditutilizationratio">Credit utilization ratio:</label>
+      <input type="number" id="creditutilizationratio" name="creditutilizationratio" step="any" required>
+    </div>
+    <div class="form-group">
+        <label for="credithistoryage">Credit History Age:</label>
+        <input type="number" id="credithistoryage" name="credithistoryage" step="any" required>
+      </div>
+      <div class="form-group">
+        <label for="paymentofminamount">Payment of minimum Amount:</label>
+        <input type="text" id="paymentofminamount" name="paymentofminamount" required>
+      </div>
+      <div class="form-group">
+        <label for="totalemipermonth">Total EMI per month:</label>
+        <input type="number" id="totalemipermonth" name="totalemipermonth" step="any" required>
+      </div>
+      <div class="form-group">
+        <label for="amountinvestedmonthly">Amount Invested Monthly:</label>
+        <input type="number" id="amountinvestedmonthly" name="amountinvestedmonthly" step="any" required>
+      </div>
+      <div class="form-group">
+        <label for="paymentbehaviour">Payment Behaviour:</label>
+        <input type="text" id="paymentbehaviour" name="paymentbehaviour" required>
+      </div>
+      <div class="form-group">
+        <label for="noofloans">No. of loans:</label>
+        <input type="number" id="noofloans" name="noofloans" required>
+      </div>
+      <div class="form-group">
+        <label for="monthlybalance">Monthly Balance:</label>
+        <input type="number" id="monthlybalance" name="monthlybalance" step="any" required>
+      </div>
+      <div class="form-group">
+        <label for="autoloan">Auto Loan:</label>
+        <input type="checkbox" id="autoloan" name="autoloan" required>
+      </div>
+      <div class="form-group">
+        <label for="creditbuilderloan">Credit Builder Loan:</label>
+        <input type="checkbox" id="creditbuilderloan" name="creditbuilderloan" required>
+      </div>
+      <div class="form-group">
+        <label for="debtconsolidationloan">Debt Consolidation Loan:</label>
+        <input type="checkbox" id="debtconsolidationloan" name="debtconsolidationloan" required>
+      </div>
+      <div class="form-group">
+        <label for="homeequaityloan">Home Equaity Loan:</label>
+        <input type="checkbox" id="homeequaityloan" name="homeequaityloan" required>
+      </div>  
+      <div class="form-group">
+        <label for="mortageloan">Mortage Loan:</label>
+        <input type="checkbox" id="mortageloan" name="mortageloan" required>
+      </div>  
+      <div class="form-group">
+        <label for="notspecified">Not Specified:</label>
+        <input type="checkbox" id="notspecified" name="notspecified" required>
+      </div>   
+      <div class="form-group">
+        <label for="paydayloan">Payday Loan:</label>
+        <input type="checkbox" id="paydayloan" name="paydayloan" required>
+      </div>
+      <div class="form-group">
+        <label for="personalloan">Personal Loan:</label>
+        <input type="checkbox" id="personalloan" name="personalloan" required>
+      </div>
+      <div class="form-group">
+        <label for="studentloan">Student Loan:</label>
+        <input type="checkbox" id="studentloan" name="studentloan" required>
+      </div>
+
+    </div>
+  </form>
+  
+  </div>
+  <button type="submit" id="submit-btn"><a href=update.html>Submit</a></button>
+</div> 
+
+
+</body>
+</html>
